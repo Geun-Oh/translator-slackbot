@@ -165,7 +165,7 @@ func (b Bot) translate(from, to, msg string) (s string, err error) {
 	form.Set("target", to)
 	form.Set("text", msg)
 
-	req, err := http.NewRequest("POST", "https://naveropenapi.apigw.ntruss.com/nmt/v1/translation", strings.NewReader(form.Encode()))
+	req, err := http.NewRequest("POST", "https://papago.apigw.ntruss.com/nmt/v1/translation", strings.NewReader(form.Encode()))
 	if err != nil {
 		return
 	}
